@@ -44,5 +44,10 @@ def checa_condicao3(f, f_linha, xn, deltaxn):
     return False
 
 #funcao responsavle para aproximar a raiz utilizando o metodo de newton
-def newton(a, b, func):
-    p1 = a - (func(a)/func(a))
+def newton(xn, f, f_linha):
+    return xn - f(xn)/f_linha(xn)
+
+
+def dicotomia(a, b):
+    xn = (a + b) / 2
+    return xn 
